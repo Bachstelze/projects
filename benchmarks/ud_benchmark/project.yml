@@ -6,11 +6,11 @@ spacy_version: ">=3.2.1,<4.0.0"
 # Variables can be referenced across the project.yml using ${vars.var_name}
 # possible treebanks: UD_Afrikaans-AfriBooms UD_English-EWT UD_German-HDT UD_Danish-DDT UD_Faroese-FarPaHC UD_Faroese-OFT  UD_Frisian_Dutch-Fame UD_Gothic-PROIEL UD_Icelandic-IcePaHC UD_Icelandic-Modern UD_Icelandic-PUD
 vars:
-  ud_treebank: "UD_English-EWT"
+  ud_treebank: "UD_Afrikaans-AfriBooms UD_English-EWT UD_German-HDT UD_Danish-DDT"
   # use "xx" for a language not currently supported by spaCy
   # xx for Faroese, Frisian, Gothic "af en de da xx"
-  spacy_lang: "en"
-  package_name: "udv25_englishewt_trf"
+  spacy_lang: "af en de da"
+  package_name: "udv25_gem_test"
   #transformer_model: "xlm-roberta-base"
   transformer_model: "Helsinki-NLP/opus-mt-gem-gem"
   gpu: 0
