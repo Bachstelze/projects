@@ -12,7 +12,7 @@ vars:
   spacy_lang: "de"
   package_name: "udv25_de_test"
   #transformer_model: "xlm-roberta-base"
-  transformer_model: "Helsinki-NLP/opus-mt-gem-gem"
+  transformer_model: "bert-base-german-cased"
   gpu: 0
   mixed_precision: true
   package_version: "0.0.1"
