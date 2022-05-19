@@ -10,7 +10,7 @@ vars:
   # use "xx" for a language not currently supported by spaCy
   # xx for Faroese, Frisian, Gothic "af en de da xx"
   spacy_lang: "en"
-  package_name: "udv25_de_test"
+  package_name: "udv25_en_destilbert"
   #transformer_model: "xlm-roberta-base"
   transformer_model: "distilbert-base-uncased"
   # possible better model? https://huggingface.co/nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large
