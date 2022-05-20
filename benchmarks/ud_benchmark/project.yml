@@ -14,7 +14,7 @@ vars:
   #transformer_model: "xlm-roberta-base"
   transformer_model: "/media/models/distilbert-base-german-casedd"
   # possible better model? https://huggingface.co/nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large
-  gpu: 0
+  gpu: 2
   mixed_precision: true
   package_version: "0.0.1"
 
