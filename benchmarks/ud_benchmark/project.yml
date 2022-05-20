@@ -6,13 +6,13 @@ spacy_version: ">=3.2.1,<4.0.0"
 # Variables can be referenced across the project.yml using ${vars.var_name}
 # possible treebanks: UD_Afrikaans-AfriBooms UD_English-EWT UD_German-HDT UD_Danish-DDT UD_Faroese-FarPaHC UD_Faroese-OFT  UD_Frisian_Dutch-Fame UD_Gothic-PROIEL UD_Icelandic-IcePaHC UD_Icelandic-Modern UD_Icelandic-PUD
 vars:
-  ud_treebank: "UD_English-EWT"
+  ud_treebank: "UD_German-HDT"
   # use "xx" for a language not currently supported by spaCy
   # xx for Faroese, Frisian, Gothic "af en de da xx"
-  spacy_lang: "en"
-  package_name: "udv25_en_destilbert"
+  spacy_lang: "de"
+  package_name: "germanUDspacy"
   #transformer_model: "xlm-roberta-base"
-  transformer_model: "distilbert-base-uncased"
+  transformer_model: "/media/models/distilbert-base-german-casedd"
   # possible better model? https://huggingface.co/nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large
   gpu: 0
   mixed_precision: true
