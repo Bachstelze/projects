@@ -6,15 +6,15 @@ spacy_version: ">=3.2.1,<4.0.0"
 # Variables can be referenced across the project.yml using ${vars.var_name}
 # possible treebanks: UD_Afrikaans-AfriBooms UD_English-EWT UD_German-HDT UD_Danish-DDT UD_Faroese-FarPaHC UD_Faroese-OFT  UD_Frisian_Dutch-Fame UD_Gothic-PROIEL UD_Icelandic-IcePaHC UD_Icelandic-Modern UD_Icelandic-PUD
 vars:
-  ud_treebank: "UD_German-HDT"
+  ud_treebank: "UD_English-EWT"
   # use "xx" for a language not currently supported by spaCy
   # xx for Faroese, Frisian, Gothic "af en de da xx"
-  spacy_lang: "de"
-  package_name: "germanUDspacy"
+  spacy_lang: "en"
+  package_name: "englishUDspacy"
   #transformer_model: "xlm-roberta-base"
-  transformer_model: "/media/models/distilbert-base-german-casedd"
+  transformer_model: "distilbert-base-cased"
   # possible better model? https://huggingface.co/nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large
-  gpu: 2
+  gpu: 0
   mixed_precision: true
   package_version: "0.0.1"
 
@@ -64,7 +64,7 @@ commands:
   - name: train-tokenizer
     help: "Train tokenizer"
     script:
-      - "python -m spacy train configs/tokenizer.cfg -o training/${vars.ud_treebank}/tokenizer --gpu-id ${vars.gpu} --nlp.lang ${vars.spacy_lang} --paths.train corpus/${vars.ud_treebank}/train.spacy --paths.dev corpus/${vars.ud_treebank}/dev.spacy"
+      - "python -m spacy train configs/tokenizer.cfg -o training/${vars.ud_treebank}/tokenizer --gpu-id ${vars.gpu} --nlp.lang ${vars.spacy_lang} --paths.train corpus/${vars.ud_treebank}/train.spacy --paths.dev corpus/${vars.ud_treebank}/dev.spacy --nlp.batch_size 500"
     deps:
       - "corpus/${vars.ud_treebank}/train.spacy"
       - "corpus/${vars.ud_treebank}/dev.spacy"
