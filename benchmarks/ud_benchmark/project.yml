@@ -15,8 +15,8 @@ vars:
   #transformer_model: "xlm-roberta-base"
   #transformer_model: "benjamin/roberta-base-wechsel-german"
   #transformer_model: "bert-base-german-cased"
-  #transformer_model: "deepset/gbert-base"
-  transformer_model: "deepset/gelectra-base"
+  transformer_model: "deepset/gbert-base"
+  #transformer_model: "deepset/gelectra-base"
   #transformer_model: "distilbert-base-german-cased"
   # possible better model? https://huggingface.co/nreimers/mMiniLMv2-L6-H384-distilled-from-XLMR-Large
   gpu: 0
